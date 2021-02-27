@@ -58,7 +58,7 @@ public class StockApiController {
 	}
 	
 	@GetMapping("{id}")
-	public Stock getStock(@PathVariable long id) {
+	public Stock getStockId(@PathVariable long id) {
 		return stockServiceImpl.findById(id);
 	}
 	
