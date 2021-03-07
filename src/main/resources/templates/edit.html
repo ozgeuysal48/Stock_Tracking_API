@@ -8,7 +8,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 body {
 	margin: 0;
@@ -17,7 +17,7 @@ body {
 
 .topnav {
 	overflow: hidden;
-	background-color: #333;
+	background-color: #1B4F72;
 }
 
 .topnav a {
@@ -36,7 +36,7 @@ body {
 }
 
 .topnav a.active {
-	background-color: #4CAF50;
+	background-color: #9B59B6 ;
 	color: white;
 }
 
@@ -69,53 +69,54 @@ body {
 		text-align: left;
 	}
 }
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+body {
+	background: #f2f2f2;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .search {
-  width: 100%;
-  position: relative;
-  display: flex;
+	width: 100%;
+	position: relative;
+	display: flex;
 }
 
 .searchTerm {
-  width: 100%;
-  border: 3px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 36px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
+	width: 100%;
+	border: 3px solid #00B4CC;
+	border-right: none;
+	padding: 5px;
+	height: 36px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	color: #999999;
 }
 
-.searchTerm:focus{
-  color: #00B4CC;
+.searchTerm:focus {
+	color: #00B4CC;
 }
 
 .searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
+	width: 40px;
+	height: 36px;
+	border: 1px solid #00B4CC;
+	background: #00B4CC;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
 }
 
 /*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.wrap {
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 </style>
 </head>
@@ -123,10 +124,9 @@ body{
 
 	<div class="topnav" id="myTopnav">
 		<a th:href="@{'/'}">Stock List</a> <a th:href="@{'/new'}">Add new
-			product</a> <a th:href="@{'/edit'}" class="active"> Update </a> 
-			<a th:href="@{'/details'}">Details</a> 
-			<a href="javascript:void(0);" class="icon"
-			onclick="myFunction()"> <i class="fa fa-bars"></i>
+			product</a> <a th:href="@{'/edit'}" class="active"> Update </a> <a
+			th:href="@{'/details'}">Details</a> <a href="javascript:void(0);"
+			class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i>
 		</a>
 	</div>
 	<div style="padding-left: 16px">
@@ -134,51 +134,51 @@ body{
 			<h1>Update Stock</h1>
 			<br />
 			<form action="#">
-			<div class="col-sm-4">
-				</form>
-				<form action="#" th:action="@{/update}" th:object="${stock}"
-					method="put">
+				<div class="col-sm-4">
+			</form>
+			<form action="#" th:action="@{/update}" th:object="${stock}"
+				method="put">
 
 
-					<div alight="left">
-						<tr>
-							<label class="form-label">Product ID</label>
-							<td><input type="text" th:field="*{id}" class="form-control"
-								placeholder="Product ID" />
-						</tr>
-					</div>
-					<div alight="left">
-						<tr>
-							<label class="form-label">Product Name</label>
-							<input type="text" th:field="*{productName}" class="form-control"
-								placeholder="Product Name" />
-					</td>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Product ID</label>
+						<td><input type="text" th:field="*{id}" class="form-control"
+							placeholder="Product ID" />
 					</tr>
-			</div>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Product Name</label>
+						<input type="text" th:field="*{productName}" class="form-control"
+							placeholder="Product Name" />
+						</td>
+					</tr>
+				</div>
 
-			<div alight="left">
+				<div alight="left">
 
-				<tr>
-					<label class="form-label">Product Type</label>
-					<td><input type="text" th:field="*{productType}"
-						class="form-control" placeholder="Product Type" /> 
-				</tr>
-			</div>
-			<div alight="left">
-				<tr>
-					<label class="form-label">Count</label>
-					<td><input type="text" th:field="*{count}"
-						class="form-control" placeholder="Count" /></td>
-				</tr>
-			</div>
+					<tr>
+						<label class="form-label">Product Type</label>
+						<td><input type="text" th:field="*{productType}"
+							class="form-control" placeholder="Product Type" />
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Count</label>
+						<td><input type="text" th:field="*{count}"
+							class="form-control" placeholder="Count" /></td>
+					</tr>
+				</div>
 
-			<div alight="left">
-				<tr>
-					<label class="form-label">Price</label>
-					<td><input type="text" th:field="*{price}"
-						class="form-control" placeholder="Price" /></td>
-				</tr>
-			</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Price</label>
+						<td><input type="text" th:field="*{price}"
+							class="form-control" placeholder="Price" /></td>
+					</tr>
+				</div>
 		</div>
 		<br>
 		<tr>
@@ -199,13 +199,14 @@ body{
 			}
 		}
 	</script>
-	<br/>
+	<br />
 	<div style="padding-left: 16px">
 		<div align="center">
-			<form action="#" th:action="@{/findByName}" th:object="${productName}" method = "GET">
+			<form action="#" th:action="@{/findByName}"
+				th:object="${productName}" method="GET">
 				<div class="col-sm-4">
 					<div class="search">
-						<input type="text" class="searchTerm" 
+						<input type="text" class="searchTerm"
 							placeholder="Search by product name...">
 						<button type="submit" class="searchButton">
 							<i class="fa fa-search"></i>
@@ -219,18 +220,18 @@ body{
 			<table class="w3-table-all">
 				<thead>
 					<tr>
-						<th>stock ID</th>
+						<th>Stock ID</th>
 						<th>Product Name</th>
 						<th>Product Type</th>
 						<th>Count</th>
 						<th>Price</th>
 					</tr>
-					<tr th:each="productName : ${productName}">
-						<td th:text="${productName.id}">Stock ID</td>
-						<td th:text="${productName.productName}">Product Name</td>
-						<td th:text="${productName.productType}">Product Type</td>
-						<td th:text="${productName.count}">Count</td>
-						<td th:text="${productName.price}">Price</td>
+					<tr th:each="stock : ${liststock }">
+						<td th:text="${stock.id}">Stock ID</td>
+						<td th:text="${stock.productName}">Product Name</td>
+						<td th:text="${stock.productType}">Product Type</td>
+						<td th:text="${stock.count}">Count</td>
+						<td th:text="${stock.price}">Price</td>
 					</tr>
 			</table>
 		</div>
