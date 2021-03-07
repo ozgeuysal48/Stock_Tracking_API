@@ -19,7 +19,7 @@ public interface StockApiRepository extends CrudRepository<Stock, Long> {
 	@Query(value = "from Stock s where s.count = (select max(s2.count) from Stock s2)")
 	public Stock findMaxCount();
 	
-	@Query(value = "from Stock m where m.count = (select min(s2.count) from Stock s2)")
+	@Query(value = "from Stock m where m.count = (select min(s2.count) from Stock s2 where s2.count != 0)")
 	public Stock findMinCount();
 	
 	@Query(value = "from Stock c where c.count = 0")	

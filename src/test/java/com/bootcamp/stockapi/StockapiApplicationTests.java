@@ -2,6 +2,7 @@ package com.bootcamp.stockapi;
 
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -16,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.bootcamp.stockapi.model.Stock;;
+import com.bootcamp.stockapi.model.Stock;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -115,12 +116,4 @@ class StockapiApplicationTests {
 				.andDo(print())
 				.andExpect(status().isOk());
 	}
-	
-	
-	
-	
-	
-	
-	
-
 }

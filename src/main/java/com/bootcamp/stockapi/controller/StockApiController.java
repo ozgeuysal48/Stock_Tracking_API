@@ -22,6 +22,10 @@ public class StockApiController {
 	@Autowired
 	private StockServiceImpl stockServiceImpl;
 	
+	@GetMapping("/index")
+	public String getIndex() {
+		return "index";
+	}
 	@GetMapping("")
 	public List<Stock> getAllStock(){
 		return stockServiceImpl.findAllStock();
